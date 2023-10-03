@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--tailwindcss CDN-->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!--link css-->
+    <link rel="stylesheet" href="input.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body class="bg-pink-300" >
+
+        <section class="flex w-full  ">
+        
+        
+
+            <div class="w-full md:w-[80%]   md:ml-[20%]  mx-auto" >
+    
+               
+                <ul class="mt-[150px] mx-[15px] relative space-y-3 " id="addNewTask">
+                    <!--li class="" > 
+                          <div class="bg-gray-200 px-[40px] py-[10px] rounded-md flex relative items-center space-x-3">
+                          <span class=" border-gray-600 border-[2px] w-[20px] h-[20px] p-[10px]  rounded-full   absolute left-2   text-center " id="nonComplete"></span>
+                          <span class=" border-gray-600 border-[2px] w-[20px] h-[20px] p-[10px]  rounded-full   bg-red-300 absolute left-2  text-center hidden" id="complete">
+                          <span class="text-[16px] absolute top-0 left-0 right-0"> <i class="fa-solid fa-check "></i> </span>
+                         </span>
+                    
+                         <span class="absolute right-2">
+                            <i class="fa-solid fa-trash"></i>
+                         </span>
+                         <span id="Showtask">text</span>
+                         <span class="absolute right-8" id="nonImportantList"><i class="fa-regular fa-star" id=""></i></span>
+                         <span class="absolute right-8 hidden" id="ImportantList"><i class="fa-solid fa-star"></i></span>
+                          </div>
+                      </li-->
+        
+                     
+                     
+                   
+                  </ul>
+                    
+                <div class="flex flex-col bg-pink-300 bg-opacity-90 shadow-sm p-[15px] fixed w-full  md:w-[80%] top-0" id="MenuBar">
+                    <!--menu icon-->
+                    <div id="Menubar" class="md:hidden block"><i class="fa-solid fa-bars text-white text-[20px] font-bold  "></i></div>
+                    <div class="flex  justify-between text-white">
+    
+                   <div class="flex flex-col text-white">
+    
+                       <h3 class="text-[25px] font-semibold">Completed</h3>
+                       <p class="text-[17px]" id="date">Date</p>
+                       
+                   </div>
+                   <div>
+                       <button class="text-white font-semibold text-[20px] hover:bg-gray-300 hover:px-[5px] py-[2px] hover:rounded-sm" id="themeButton">theme</button>
+                       <div class="absolute right-1 hidden" id="Showtheme">
+                        <div class="w-[200px] h-[250px]  bg-gray-100 rounded-md shadow-md shadow-gray-100  space-x-2 space-y-2 grid grid-cols-3 p-[7px] " id="themeColorSel">
+    
+                        
+                            <div class="w-[50px] h-[50px] rounded-sm bg-[#ffdcdb] hover:border-[2px] border-gray-700 mt-[7px] ml-[7px]"></div>
+                            <div class="w-[50px] h-[50px] rounded-sm bg-[#bea9de] hover:border-[2px] border-gray-700"></div>
+                            <div class="w-[50px] h-[50px] rounded-sm bg-[#a0b9ff] hover:border-[2px] border-gray-700"></div>
+                            <div class="w-[50px] h-[50px] rounded-sm bg-[#fff68f] hover:border-[2px] border-gray-700"></div>
+                            <div class="w-[50px] h-[50px] rounded-sm bg-[#e9f263] hover:border-[2px] border-gray-700"></div>
+                            <div class="w-[50px] h-[50px] rounded-sm bg-[#b7fff1] hover:border-[2px] border-gray-700"></div>
+                            <div class="w-[50px] h-[50px] rounded-sm bg-[#ffc125] hover:border-[2px] border-gray-700"></div>
+                            <div class="w-[50px] h-[50px] rounded-sm bg-[#a05a4b] hover:border-[2px] border-gray-700"></div>
+                            <div class="w-[50px] h-[50px] rounded-sm bg-[#0e9cef] hover:border-[2px] border-gray-700"></div>
+                            <div class="w-[50px] h-[50px] rounded-sm bg-[#f4915f] hover:border-[2px] border-gray-700"></div>
+                            <div class="w-[50px] h-[50px] rounded-sm bg-[#999999] hover:border-[2px] border-gray-700"></div>
+        
+                           </div>
+                       </div>
+                       
+                   </div>
+                   </div>
+                  
+               </div>
+               
+                <div class="flex bg-pink-300 opacity-90  p-[15px] fixed w-full md:w-[80%] bottom-0 shadow-md shadow-gray-200" id="bottomBar">
+                    <div class="flex space-x-2 items-center w-full  relative">
+                        <i class="fa-soli d fa-plus text-gray-600 text-[25px] absolute left-8"></i>
+                 <input type="text" placeholder="Add a task" class="placeholder:text-gray-600 outline-none  w-full  pl-[40px] p-[15px] rounded-lg bg-gray-100 relative" id="inputTask">
+                    </div> 
+    
+                </div>
+                
+            </div>
+
+    
+            <div class="md:w-[20%] w-[200px] h-[100vh]  bg-gray-50 shadow-sm md:flex hidden fixed" id="sideSlide">
+                <div class="absolute right-4 top-3 block md:hidden" id="crossBar">
+                    <i class="fa-solid fa-xmark text-black text-[20px] font-bold"></i>
+                </div>
+
+                <div class="flex flex-col mt-[140px] space-y-3 items-start ml-[37px]">
+
+                    <a href="index.html" class="text-[17px]" id="mydaylist"> <span class="absolute left-3 text-black"><i class="fa-solid fa-sun"></i></span> MyDay <span class="absolute right-4 bg-gray-200 px-[8px] py-[2px] rounded-full text-[12px]">0</span></a>
+                    <a href="important.html" class="text-[17px]" id="Importantlist"> <span class="absolute left-3 text-black"><i class="fa-solid fa-sun"></i></span> Important <span class="absolute right-4 bg-gray-200 px-[8px] py-[2px] rounded-full text-[12px]">0</span></a>
+                    <a href="task.html" class="text-[17px]" id="taskslist"> <span class="absolute left-3 text-black"><i class="fa-solid fa-sun"></i></span> Tasks<span class="absolute right-4 bg-gray-200 px-[8px] py-[2px] rounded-full text-[12px]">0</span></a>
+                    <a href="complete.html" class="text-[17px]" id="completelist"> <span class="absolute left-3 text-black"><i class="fa-solid fa-sun"></i></span> Completed <span class="absolute right-4 bg-gray-200 px-[8px] py-[2px] rounded-full text-[12px]">0</span></a>
+      
+                </div>
+            </div>
+        </section>
+
+  
+
+    <script src="App.js"></script>
+    <script src="https://kit.fontawesome.com/a13ee94394.js" crossorigin="anonymous"></script>
+</body>
+</html>
